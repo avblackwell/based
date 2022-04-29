@@ -1,20 +1,20 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
   <div class="wrapper flow">
-    <h1>Homepage</h1>
-    <h2>Site info</h2>
-    <dl>
-      <dt>name</dt>
-      <dd>{{ site.name }}</dd>
-      <dt>url</dt>
-      <dd>{{ site.url }}</dd>
-      <dt>authorName (RSS)</dt>
-      <dd>{{ site.authorName }}</dd>
-      <dt>authorEmail (RSS)</dt>
-      <dd>{{ site.authorEmail }}</dd>
-    </dl>
-    <h2>Posts</h2>
-    {% set postListItems = collections.blog %}
-    {% include "partials/post-list.njk" %}
+    <section class="intro">
+      <h1>Alex Blackwell</h1>
+      <p><i>UX Designer</i></p>
+      <p>I'm a multidisciplinary developer and designer, passionate about ethics and accessibility.</p>
+    </section>
+    <section class="posts">
+      <h2>Posts</h2>
+      {% set postListItems = collections.blog %}
+      {% include "partials/post-list.njk" %}
+    </section>
+    <section class="projects">
+      <h2>Projects</h2>
+      {# {% set projectListItems = collections.projects %}
+      {% include "partials/project-list.njk" %} #}
+    </section>
   </div>
 {% endblock %}
